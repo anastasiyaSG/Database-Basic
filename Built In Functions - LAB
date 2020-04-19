@@ -1,0 +1,30 @@
+1. 
+SELECT country_name FROM  countries where 
+SUBSTRING(`country_name`,1,2) = 'An';
+2.
+SELECT REPLACE(`country_name`,'An','***')  FROM  countries where 
+SUBSTRING(`country_name`,1,2) = 'An';
+3.
+SELECT char_length(`country_name`)  FROM  countries where 
+SUBSTRING(`country_name`,1,2) = 'An';
+4.
+SELECT locate('An',`country_name`,3)  FROM  countries where 
+SUBSTRING(`country_name`,1,2) = 'An';
+5.
+SELECT INSERT(`country_name`,1,1,'Anievelika')FROM  countries where 
+SUBSTRING(`country_name`,1,2) = 'An';
+6.
+SELECT country_name FROM countries WHERE
+SUBSTRING(country_name,1,2) = 'Bu';
+7.
+SELECT replace(`country_name`,'Bu','**') FROM countries WHERE
+SUBSTRING(country_name,1,2) = 'Bu';
+8.
+SELECT country_name FROM countries
+WHERE country_name LIKE '__b%';
+9.
+SELECT country_name FROM countries
+WHERE country_name LIKE 's%l';
+10.
+SELECT country_name FROM countries
+WHERE country_name REGEXP '^[B][a-z]{7}$';
